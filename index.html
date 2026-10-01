@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#1c211e"><meta name="description" content="缉邪司员工系统 · 付馥线互动故事"><title>缉邪司 · 员工系统</title>
+<link rel="stylesheet" href="./style.css"><script src="./story-data.js" defer></script><script src="./app.js" defer></script>
+</head>
+<body>
+<div class="ambient" aria-hidden="true"></div>
+<main id="app">
+<section id="login" class="entry-screen">
+ <div class="entry-shell">
+  <div class="system-mark" aria-hidden="true">缉</div>
+  <p class="eyebrow">JIXIESI / EMPLOYEE SYSTEM</p>
+  <h1>缉邪司<span>员工系统</span></h1>
+  <p class="entry-copy">请输入员工姓名，查阅你的工卡。</p>
+  <form id="login-form" novalidate>
+   <label for="employee-name">员工姓名</label>
+   <div class="name-field"><input id="employee-name" name="employee-name" placeholder="请输入员工姓名" type="text" autocomplete="off" maxlength="30" required aria-describedby="login-error"><span aria-hidden="true">↵</span></div>
+   <p id="login-error" class="form-error" role="alert"></p>
+   <button type="submit" class="primary">确认 <span aria-hidden="true">→</span></button>
+  </form>
+  <div class="entry-divider"></div><p class="entry-foot">缉邪司 · 内部员工系统</p>
+ </div>
+ <div class="entry-watermark" aria-hidden="true">司</div>
+</section>
+<section id="card-screen" class="entry-screen" hidden>
+ <div class="card-entry"><p class="eyebrow">IDENTITY CONFIRMED</p><h2 class="screen-heading">欢迎回来，付馥。</h2><div id="entry-card"></div><button id="start-game" class="primary">继续 <span aria-hidden="true">→</span></button><button id="return-login" class="quiet">返回姓名输入</button></div>
+</section>
+<section id="quote-screen" class="quote-screen" hidden><div class="quote-wrap"><span class="quote-star" aria-hidden="true">✳</span><blockquote id="opening-quote"></blockquote><button id="skip-quote" class="quiet">继续 →</button></div></section>
+<section id="game" hidden>
+ <header class="game-header"><div class="header-inner"><div class="current-character"><span class="avatar fu-avatar" aria-hidden="true"></span><div><span class="header-caption">当前角色</span><strong>付馥</strong></div></div><div class="header-actions"><button id="restart-game" class="quiet small">重新开始</button><button id="open-card" class="card-button"><span class="card-icon" aria-hidden="true"></span>工卡</button></div></div></header>
+ <div class="story-layout"><div class="story-caption"><span>缉邪司 · 付馥线</span><span class="caption-rule"></span><span>互动故事</span></div><div id="transcript" class="transcript" aria-label="故事记录"></div><div id="controls" class="story-controls" aria-label="当前行动"></div><p id="announcement" class="sr-only" aria-live="polite"></p><footer class="story-footer">缉邪司<span>✳</span>付馥线</footer></div>
+</section>
+</main>
+<dialog id="card-dialog" aria-labelledby="card-dialog-title"><div class="dialog-top"><h2 id="card-dialog-title">员工工卡</h2><button id="close-card" class="close-button" aria-label="关闭工卡">×</button></div><div id="modal-card"></div></dialog>
+<dialog id="restart-dialog" aria-labelledby="restart-title"><h2 id="restart-title">重新开始？</h2><p>将回到故事开场，重新选择与掷骰。</p><div class="confirm-actions"><button id="cancel-restart" class="secondary">继续阅读</button><button id="confirm-restart" class="primary">重新开始</button></div></dialog>
+<noscript>请启用 JavaScript 后进入缉邪司员工系统。</noscript>
+</body></html>
