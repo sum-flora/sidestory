@@ -9,7 +9,7 @@
 3. Branch 选择 main，目录选择 /(root)，点击 Save。
 4. 等待 GitHub Pages 部署完成，Pages 页面会显示实际访问链接。
 
-预计网站地址：https://sum-flora.github.io/about-jxs-pro/
+网站地址：https://sum-flora.github.io/sidestory/
 
 ## 后续更新
 
